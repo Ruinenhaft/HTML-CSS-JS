@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 연습중</title>
+</head>
+
+<body>
+    <form action="../PHP/server.php" method="post">
+        <label for="user_id">아이디</label>
+        <input type="text" id="user_id" name="text"><br>
+        <label for="password_id">비밀번호</label>
+        <input type="password" id="password_id" name="password"><br>
+
+        <label for="text_id">value</label>
+        <input type="text" id="text_id" name="text_2" size="20" maxlength="10" value="텍스트 기본"><br>
+        <input type="hidden" name="hidden" value="1234"><br>
+
+        <label for="search_id">value</label>
+        <input type="search" id="search_id" name="search" value="서치"><br>
+
+        <label for="url_id">value</label>
+        <input type="url" id="url_id" name="url" value="https://www.naver.com"><br>
+
+        <label for="email_id">value</label>
+        <input type="email" id="email_id" name="email" value="eulennests@gmail.com"><br>
+
+        <label for="tel_id">value</label>
+        <input type="tel" id="tel_id" name="tel" value="001-0011-0001" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+
+        <label for="number_id">value</label>
+        <input type="number" id="number_id" name="number" min="1" max="5" value="1"><br>
+
+        <label for="range_id">value</label>
+        <input type="range" id="range_id" name="range" min="1" max="5" value="1"><br>
+
+        <label for="color_id">컬러</label>
+        <input type="color" id="color_id" name="color" value="black">
+        <fieldset>
+            <legend>신청 과목</legend>
+            <p>이 달에 신청할 과목을 선택하세요 (1과목만 가능)</p>
+            <label><input type="radio" name="subject" value="회화">회화</label>
+            <label><input type="radio" name="subject" value="문법">문법</label>
+            <label><input type="radio" name="subject" value="작문">작문</label>
+        </fieldset>
+        <fieldset>
+            <legend>메일링</legend>
+            <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요 (복수 선택 가능)</p>
+            <label><input type="checkbox" name="mailing[]" value="news">해외 단신
+            </label>
+            <label><input type="checkbox" name="mailing[]" value="dialog">5분 회화
+            </label>
+            <label><input type="checkbox" name="mailing[]" value="pops">모닝팝스
+            </label>
+        </fieldset>
+        <hr>
+        <h2> 날짜 입력</h2>
+        <label>시작 날짜<input type="date" value="2022-11-25" id="start_date" name="start_date"></label>
+        <label>시간 : <input type="time" value="09:00" id="start_time" name="start_time"></label><br>
+        <label>마감 날짜<input type="date" value="2022-11-25" id="start_date" name="end_date"></label>
+        <label>시간 : <input type="time" value="17:50" id="end_time" name="end_time"></label><br>
+
+        <label>datetime <input type="datetime-local" value="2022-12-02T15:12" id="datetime_local" name="datetime_local"></label><br>
+        <hr>
+        <label class="reg" for="uname">이름</label>
+        <input type="text" id="uname" autofocus placeholder="ㅇㅇㅇ" required maxlength="25" minlegth="2"><br>
+
+        <label class="reg" for="uid" >학번</label>
+        <input type="text" id="uid" placeholder="하이픈없이 입력" required><br>
+
+        <label class="reg" for="subj">운영체제</label>
+        <input type="text" id="subj" value="오전 09:00~12:00" readonly><br>
+        <select id = "class" name="Com_class">
+            <optgroup label="전공">
+                <option value="OS" selected>운영체제</option>
+                <option value="CS">컴구</option>
+                <option value="DS">자료구조</option>
+                <option value="Al">알고리즘</option>
+            </optgroup>
+            <optgroup label="교양">
+                <option value="ES">공학과 사회</option>
+                <option value="IS">인문과학</option>
+            </optgroup>
+        </select><br>
+        <hr>
+
+        <label for="interest">취미</label><br>
+
+        <input type="text" id="interest" list="choices">
+        <datalist id="choices" name="interest_datalist">
+            <option value="Warhammer" label="워해머4k"></option>
+            <option value="Noita" label="노이타"></option>
+            <option value="LOL" label="롤"></option>
+        </datalist><br>
+        <label for="txtarea">자기소개</label><br>
+        <textarea id="txtarea" name="introd" cols="20" rows="5"></textarea><br>
+        
+        <label>점유율 0.89</label>
+        <meter value="0.8"></meter>
+        <label>적정 트레픽</label>
+        <meter min="0" max="100" optimun="70" value="68"></meter>
+        <label>트레픽 초과</label>
+        <meter min="0" max="100" high="90" value="95" optimun="70"></meter>
+        <label>동적사용량</label>
+        <progress max="100" value="20" id="pro_bar"></progress><br>
+        <button onclick="jbFunc()">Click</button><br>
+
+        <script>
+            function jbFunc(){
+                document.getElementById('pro_bar').value = '80';
+            }
+        </script>
+        <hr>
+        <input type="submit" value="전송하기">
+        <input type="reset" value="리셋">
+
+    </form>
+
+</body>
+
+</html>
