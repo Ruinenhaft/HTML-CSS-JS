@@ -1,6 +1,6 @@
 //자바 스크립트 코드를 작성.
 
-/*var input_number = prompt("숫자를 입력해주세요")//그냥 입력받으면 string으로 처리.
+var input_number = prompt("숫자를 입력해주세요")//그냥 입력받으면 string으로 처리.
 if(input_number == ''){//값을 입력 안했을 때, 앞에서 Number 형변환을 시행할 경우 0으로 카운트.
     alert("값을 입력해주세요.");
 }else if(input_number == null){//취소 버튼 case
@@ -20,7 +20,7 @@ if(input_number == ''){//값을 입력 안했을 때, 앞에서 Number 형변환
     }
 
 }
-*/
+
 var userNumber = prompt("숫자를 입력하세요.");
 var displayArea = document.querySelector('#result');
 if (userNumber != null) {
