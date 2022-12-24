@@ -17,7 +17,7 @@ function newRegister(){
     nameList.insertBefore(newP, nameList.childNodes[0]);//변수에 담아서 노드를 p-text-p-text-p-text형식으로 최신값을 0번 노드에 넣어준다.
     userName.value="";
 
-    var removeBtns = document.querySelectorAll(".del");//삭제의 경우
+    var removeBtns = document.querySelectorAll(".del");//삭제의 경우 
 
     for(let i=0; i<removeBtns.length;i++){//for문을 통해 <span id='del'>X</span> id del인 요소에 클릭 이벤트를 부여한다.
         removeBtns[i].addEventListener("click", function(){
@@ -25,5 +25,5 @@ function newRegister(){
                 this.parentNode.parentNode.removeChild(this.parentNode);//removechild가 관계를 끊은 해당 노드의 참조를 반환해서
         });//p1-text1-p2-text2-p3-text3 -> p1-text1-p3-text3 text2 p2로 거슬러가 p2를 제거하고 해당 요소가 참조하고 있던 text1의
         // 주소를 반환받아 p3가 이어받게 된다.
-    }
-}
+    }//추가. 주소값을 이어서 받는게 아니라
+}//newP 노드를 nameList라는 노드 리스트에 추가하게 되는데 이때 삭제한 노드 참조 반환, 즉 관계를 끊은 노드가 참조하고 있던 
